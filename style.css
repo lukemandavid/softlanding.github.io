@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inconsolata", monospace;
+  text-decoration: none;
+  list-style: none;
+}
+body {
+  background: #fefefe;
+}
+header {
+  width: 100%;
+  height: 80px;
+  background: #11101b;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 100px;
+}
+.logo {
+  color: #fefefe;
+  font-size: 28px;
+  font-weight: bold;
+}
+.hamburger {
+  display: none;
+}
+.nav-btn ul {
+  display: flex;
+}
+.nav-btn ul li a {
+  display: block;
+  color: #fefefe;
+  font-size: 20px;
+  padding: 10px 25px;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+#home {
+  background: #fefefe;
+  color: #000;
+  margin-right: 5px;
+}
+.nav-btn ul li a:hover {
+  background: #fefefe;
+  color: #000;
+}
+@media screen and (max-width: 1320px) {
+  header {
+    padding: 0 50px;
+  }
+}
+@media screen and (max-width: 1100px) {
+  header {
+    padding: 0 30px;
+  }
+}
+@media screen and (max-width: 850px) {
+  .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+  .hamburger .line {
+    width: 30px;
+    height: 3px;
+    background: #fefefe;
+    margin: 6px 6px;
+  }
+  .nav-btn {
+    height: 0;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    background: #11101b;
+    transition: 0.3s;
+  }
+  .nav-btn ul {
+    display: block;
+    width: fit-content;
+    margin: 80px auto 0 auto;
+    text-align: center;
+    opacity: 0;
+  }
+  .nav-btn.active {
+    height: 450px;
+  }
+  .nav-btn.active ul {
+    opacity: 1;
+  }
+  .nav-btn ul li a {
+    margin-bottom: 12px;
+    overflow: hidden;
+  }
+}
+@media screen and (max-width: 286px) {
+  .logo {
+    font-size: 25px;
+  }
+}
